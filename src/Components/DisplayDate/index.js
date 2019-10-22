@@ -3,8 +3,7 @@ import React, { Component } from 'react';
 class DisplayDate extends Component {
 
   state = {
-    time: '',
-    show: Boolean
+    time: ''
   }
 
   componentDidMount() {
@@ -39,8 +38,6 @@ class DisplayDate extends Component {
       hour12: hour12 && true,
       region: typeInter ? 'en-US' : 'pt-BR'
   }
-    const region = typeInter ? 'en-US' : 'pt-BR';
-    console.log(type.region)
     this.setState({
       time: new Date().toLocaleString(type.region, type)
     });
